@@ -357,7 +357,7 @@ export default function App() {
 
   const programStart = new Date("2026-03-05");
   const msPerWeek = 7 * 24 * 60 * 60 * 1000;
-  const programWeekNum = Math.floor((today - programStart) / msPerWeek);
+  const programWeekNum = Math.floor((today.getTime() - programStart.getTime()) / msPerWeek);
   const currentPhase = programWeekNum >= 0 ? Math.min(Math.floor(programWeekNum / 2), 3) : -1;
 
   const getWeekLabel = () => {
