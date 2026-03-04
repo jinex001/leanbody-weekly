@@ -26,3 +26,11 @@
   },
   "include": ["src"]
 }
+
+{
+  "compilerOptions": {
+    "strict": false,
+    "noImplicitAny": false
+  },
+  "references": [{ "path": "./tsconfig.app.json" }]
+}
