@@ -1,4 +1,4 @@
-import { useState } from “react”;
+import { useState } from "react”;
 
 const PHASES = [
 { weeks: “1~2주”, phase: “FOUNDATION”, goal: “패턴 정착 + 체지방 감소 시작”, bf: “14.9% → 13.4% ✓”, color: “#60A5FA” },
