@@ -8,7 +8,7 @@ const PHASES = [
 ];
 
 const DAILY_IF = [
-{ time: “07:00”, icon: “⚡”, text: “기상 · Whey 반스쿱 (단백질만)”, tag: “” },
+{ time: “07:00”, icon: “⚡”, text: “기상 - Whey 반스쿱 (단백질만)”, tag: “” },
 { time: “07:15”, icon: “🏋️”, text: “공복 웨이트 45~55분”, tag: “운동” },
 { time: “08:15”, icon: “🥚”, text: “계란흰자 4개 + Whey 25g”, tag: “단백질” },
 { time: “12:00”, icon: “🍽️”, text: “첫 식사 - 탄수 해제 (대구+딩켈파스타 또는 된장찌개)”, tag: “식사1” },
@@ -20,12 +20,12 @@ const DAILY_IF = [
 function makeRoutine() {
 return [
 {
-day: “MON”, label: “Push A”, emoji: “💪”, focus: “가슴 · 어깨”,
+day: “MON”, label: “Push A”, emoji: “💪”, focus: “가슴 - 어깨”,
 accent: “#60A5FA”,
 liss: { type: “빠르게 걷기”, duration: 40, loc: “Tiergarten” },
 kettlebell: null,
 exercises: [
-{ name: “Dips (가중)”, note: “⬆️ BW+10kg 달성!”, sets: [{ kg: “BW+10”, reps: 10 }, { kg: “BW+10”, reps: 10 }, { kg: “BW+10”, reps: 9 }, { kg: “BW+10”, reps: 9 }] },
+{ name: “Dips (가중)”, note: “UP BW+10kg 달성!”, sets: [{ kg: “BW+10”, reps: 10 }, { kg: “BW+10”, reps: 10 }, { kg: “BW+10”, reps: 9 }, { kg: “BW+10”, reps: 9 }] },
 { name: “Flat DB Press”, note: “22.5kg 안정화 → 24kg 도전”, sets: [{ kg: 22.5, reps: 10 }, { kg: 22.5, reps: 10 }, { kg: 24, reps: 8 }, { kg: 24, reps: 8 }] },
 { name: “Cable Fly High-Low”, note: “”, sets: [{ kg: 12.5, reps: 12 }, { kg: 12.5, reps: 10 }, { kg: 12.5, reps: 10 }] },
 { name: “Lateral Raise”, note: “boulder shoulders!”, sets: [{ kg: 5, reps: 15 }, { kg: 5, reps: 15 }, { kg: 5, reps: 15 }, { kg: 5, reps: 15 }] },
@@ -33,7 +33,7 @@ exercises: [
 ],
 },
 {
-day: “TUE”, label: “Pull A”, emoji: “🔙”, focus: “등 · 이두”,
+day: “TUE”, label: “Pull A”, emoji: “🔙”, focus: “등 - 이두”,
 accent: “#34D399”,
 liss: { type: “수영”, duration: 40, loc: “피트니스 수영장” },
 kettlebell: null,
@@ -46,7 +46,7 @@ exercises: [
 ],
 },
 {
-day: “WED”, label: “Legs A + KB”, emoji: “🦵”, focus: “전면 · 코어 · 케틀벨”,
+day: “WED”, label: “Legs A + KB”, emoji: “🦵”, focus: “전면 - 코어 - 케틀벨”,
 accent: “#FBBF24”,
 liss: { type: “케틀벨 서킷”, duration: 30, loc: “헬스장” },
 kettlebell: [
@@ -62,7 +62,7 @@ exercises: [
 ],
 },
 {
-day: “THU”, label: “Push B”, emoji: “🏋️”, focus: “어깨 · 삼두”,
+day: “THU”, label: “Push B”, emoji: “🏋️”, focus: “어깨 - 삼두”,
 accent: “#A78BFA”,
 liss: { type: “자전거 or 일립티컬”, duration: 40, loc: “헬스장 유산소” },
 kettlebell: null,
@@ -75,7 +75,7 @@ exercises: [
 ],
 },
 {
-day: “FRI”, label: “Pull B + KB”, emoji: “🔥”, focus: “등 두께 · 이두 · 케틀벨”,
+day: “FRI”, label: “Pull B + KB”, emoji: “🔥”, focus: “등 두께 - 이두 - 케틀벨”,
 accent: “#F472B6”,
 liss: { type: “수영”, duration: 40, loc: “피트니스 수영장” },
 kettlebell: [
@@ -91,7 +91,7 @@ exercises: [
 ],
 },
 {
-day: “SAT”, label: “Legs B + KB”, emoji: “⚡”, focus: “후면 · 코어 · 케틀벨”,
+day: “SAT”, label: “Legs B + KB”, emoji: “⚡”, focus: “후면 - 코어 - 케틀벨”,
 accent: “#FB923C”,
 liss: { type: “가벼운 산책”, duration: 30, loc: “동네 공원” },
 kettlebell: [
@@ -165,7 +165,7 @@ transition: “all 0.2s”,
 }}>
 <div>
 <div style={{ fontSize: 12, fontWeight: 700, color: accent }}>{kb.name}</div>
-<div style={{ fontSize: 11, color: “#9CA3AF”, marginTop: 2 }}>{kb.sets} · 휴식 {kb.rest}</div>
+<div style={{ fontSize: 11, color: “#9CA3AF”, marginTop: 2 }}>{kb.sets} - 휴식 {kb.rest}</div>
 <div style={{ fontSize: 10, color: “#FBBF24”, marginTop: 2 }}>💡 {kb.note}</div>
 </div>
 <div onClick={() => setDone(!done)} style={{
@@ -196,7 +196,7 @@ transition: “all 0.2s”,
 오후 LISS — {liss.type}
 </div>
 <div style={{ fontSize: 10, color: “#6B7280”, marginTop: 2 }}>
-{liss.duration}분 · 105~122bpm · {liss.loc}
+{liss.duration}분 - 105~122bpm - {liss.loc}
 </div>
 </div>
 <div onClick={() => setDone(!done)} style={{
@@ -243,7 +243,7 @@ fontSize: 11, fontWeight: 900, letterSpacing: “0.1em”,
 </div>
 <div style={{ fontSize: 11, color: “#6B7280”, marginTop: 1 }}>
 {routine.focus}
-{hasKB && <span style={{ color: “#FBBF24”, marginLeft: 8 }}>🔔 KB포함</span>}
+{hasKB && <span style={{ color: “#FBBF24”, marginLeft: 8 }}>KB포함</span>}
 {routine.liss && <span style={{ color: “#34D399”, marginLeft: 6 }}>+ {routine.liss.type} {routine.liss.duration}분</span>}
 </div>
 </div>
@@ -279,7 +279,7 @@ TODAY
       {tab === "workout" && (
         <div style={{ padding: 12 }}>
           <div style={{ fontSize: 10, color: "#4B5563", marginBottom: 10, paddingLeft: 4 }}>
-            💡 세트 사이 휴식 60초 · 운동 전 Whey 반스쿱
+            💡 세트 사이 휴식 60초 - 운동 전 Whey 반스쿱
           </div>
           {routine.exercises.map((ex, ei) => (
             <div key={ei} style={{ marginBottom: 14 }}>
@@ -299,7 +299,7 @@ TODAY
           {hasKB && (
             <div style={{ paddingTop: 10, borderTop: "1px solid #1F2937" }}>
               <div style={{ fontSize: 10, color: "#6B7280", marginBottom: 8, letterSpacing: "0.1em" }}>
-                🔔 케틀벨
+                케틀벨
               </div>
               {routine.kettlebell.map((kb, i) => (
                 <KBCard key={i} kb={kb} accent={routine.accent} />
@@ -312,7 +312,7 @@ TODAY
       {tab === "liss" && (
         <div style={{ padding: "8px 0" }}>
           <div style={{ fontSize: 10, color: "#4B5563", margin: "8px 12px" }}>
-            💡 심박수 105~122bpm 유지 · 근손실 없이 지방 연소
+            💡 심박수 105~122bpm 유지 - 근손실 없이 지방 연소
           </div>
           {routine.liss && <LissRow liss={routine.liss} accent={routine.accent} />}
         </div>
@@ -387,14 +387,14 @@ return (
   <div style={{ background: "linear-gradient(180deg, #0D1F3C 0%, #060A0F 100%)", padding: "32px 20px 24px", borderBottom: "1px solid #1F2937" }}>
     <div style={{ maxWidth: 600, margin: "0 auto" }}>
       <div style={{ fontSize: 10, color: "#3B82F6", letterSpacing: "0.2em", marginBottom: 6 }}>
-        PERSONAL TRAINER · 8-WEEK PROGRAM
+        PERSONAL TRAINER - 8-WEEK PROGRAM
       </div>
       <div style={{ fontSize: 30, fontWeight: 900, color: "#F9FAFB", lineHeight: 1.1 }}>
         WOO HYUNG'S{" "}
         <span style={{ color: "#60A5FA" }}>LEAN MUSCLE</span> PLAN
       </div>
       <div style={{ fontSize: 12, color: "#4B5563", marginTop: 8 }}>
-        PPL x 6일 · 케틀벨 · 수영/LISS · Modified IF 16:8
+        PPL x 6일 - 케틀벨 - 수영/LISS - Modified IF 16:8
       </div>
 
       <div style={{ display: "flex", marginTop: 20, borderRadius: 12, overflow: "hidden", border: "1px solid #1F2937" }}>
@@ -455,7 +455,7 @@ return (
     {view === "phases" && (
       <div>
         <div style={{ fontSize: 11, color: "#4B5563", marginBottom: 12 }}>
-          시작일: 2026.03.05 · 완료: 2026.04.29
+          시작일: 2026.03.05 - 완료: 2026.04.29
         </div>
         {PHASES.map((p, i) => (
           <div key={i} style={{ borderRadius: 14, overflow: "hidden", border: "1px solid " + p.color + "30", background: "#0D1117", marginBottom: 12 }}>
@@ -543,6 +543,7 @@ return (
     )}
   </div>
 </div>
+```
 
 );
 }
